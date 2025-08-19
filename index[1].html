@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Imperalith Capital</title>
+    <meta name="description" content="Research-driven market frameworks and tools." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">IC</div>
+        <div class="brand-text">
+          <span class="brand-name">IMPERALITH</span>
+          <span class="brand-sub">CAPITAL MANAGEMENT</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <button class="menu">MENU</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>What makes an attractive<br/> alternative investment?</h1>
+          <a class="cta" href="mailto:contact@imperalith.com">Contact us</a>
+        </div>
+        <div class="globe-wrap">
+          <canvas id="globe-canvas" aria-label="Animated rotating globe"></canvas>
+          <div class="globe-fallback" aria-hidden="true"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>EN</span>
+    </footer>
+
+    <!-- Three.js via CDN -->
+    <script src="https://unpkg.com/three@0.161.0/build/three.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
