@@ -72,3 +72,54 @@
     // Nothing else to do; CSS fallback covers it.
   }
 })();
+
+
+// ===== Overlay Menu Controls =====
+(() => {
+  const btn = document.querySelector('.menu');       // the MENU button in your header
+  const menu = document.getElementById('megaMenu');  // the overlay div added to index.html
+  if (!btn || !menu) return;                         // safe no-op if markup not present
+
+  const closers = menu.querySelectorAll('[data-close]');
+  const focusable = 'a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])';
+  let lastFocused = null;
+
+  function openMenu(){
+    lastFocused = document.activeElement;
+    menu.hidden = false;
+    btn.setAttribute('aria-expanded','true');
+    const first = menu.querySelector(focusable);
+    if (first) first.focus();
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', onKeydown);
+  }
+
+  function closeMenu(){
+    menu.hidden = true;
+    btn.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', onKeydown);
+    if (lastFocused) lastFocused.focus();
+  }
+
+  function onKeydown(e){
+    if (e.key === 'Escape') closeMenu();
+    if (e.key === 'Tab'){
+      const f = Array.from(menu.querySelectorAll(focusable));
+      if (!f.length) return;
+      const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first){ last.focus(); e.preventDefault(); }
+      else if (!e.shiftKey && document.activeElement === last){ first.focus(); e.preventDefault(); }
+    }
+  }
+
+  // a11y wiring on trigger
+  btn.setAttribute('aria-haspopup','dialog');
+  btn.setAttribute('aria-controls','megaMenu');
+  btn.setAttribute('aria-expanded','false');
+
+  // events
+  btn.addEventListener('click', openMenu);
+  closers.forEach(el => el.addEventListener('click', closeMenu));
+  menu.addEventListener('click', (e)=>{ if (e.target.dataset.close !== undefined) closeMenu(); });
+})();
