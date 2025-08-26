@@ -11,6 +11,70 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   </head>
+  <!-- ===== FULLSCREEN OVERLAY MENU ===== -->
+<div id="megaMenu" class="mega" role="dialog" aria-modal="true" aria-labelledby="megaTitle" hidden>
+  <div class="mega__backdrop" data-close></div>
+
+  <div class="mega__panel">
+    <header class="mega__hdr">
+      <div class="brand">
+        <div class="logo">IC</div>
+        <div class="brand-text">
+          <span class="brand-name">IMPERALITH</span>
+          <span class="brand-sub">CAPITAL MANAGEMENT</span>
+        </div>
+      </div>
+      <button class="mega__close" aria-label="Close menu" data-close>&times;</button>
+    </header>
+
+    <h2 id="megaTitle" class="sr-only">Site Navigation</h2>
+
+    <div class="mega__grid">
+      <section class="mega__col">
+        <h3 class="mega__title">Strategies</h3>
+        <hr class="mega__rule" />
+        <nav class="mega__nav">
+          <a href="/strategies" class="mega__link">Strategies Overview</a>
+          <a href="/ils" class="mega__link">Insurance-Linked Securities</a>
+          <a href="/trade-finance" class="mega__link">Trade Finance</a>
+        </nav>
+      </section>
+
+      <section class="mega__col">
+        <h3 class="mega__title">About</h3>
+        <hr class="mega__rule" />
+        <nav class="mega__nav">
+          <a href="/company" class="mega__link">Company Overview</a>
+          <a href="/history" class="mega__link">Our History</a>
+          <a href="/people" class="mega__link">People</a>
+          <a href="/contact" class="mega__link">Contact</a>
+        </nav>
+      </section>
+
+      <section class="mega__col">
+        <h3 class="mega__title">Insights</h3>
+        <hr class="mega__rule" />
+        <nav class="mega__nav mega__nav--cards">
+          <a href="/insights/disaster-gap-ils" class="mega__card">
+            <span class="mega__card-title">Bridging the Disaster Gap: ILS</span>
+          </a>
+          <a href="/insights/ils-esg" class="mega__card">
+            <span class="mega__card-title">ILS: Climate & ESG</span>
+          </a>
+          <a href="/insights/ctr-investments" class="mega__card">
+            <span class="mega__card-title">Confirmed Trade Receivables</span>
+          </a>
+          <a href="/insights" class="mega__link mega__all">All Insights →</a>
+        </nav>
+      </section>
+    </div>
+
+    <footer class="mega__ftr">
+      <div class="lang">EN</div>
+      <div class="legal">© Imperalith Capital. All rights reserved.</div>
+    </footer>
+  </div>
+</div>
   <body>
     <header class="site-header">
       <div class="brand">
