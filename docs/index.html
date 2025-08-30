@@ -20,6 +20,7 @@
       height: 100vh;
       position: relative;
     }
+
     /* HERO STYLES */
     .hero {
       display: flex;
@@ -71,10 +72,30 @@
       padding: 2rem;
       font-family: 'Inter', sans-serif;
     }
+
+    /* === PLACEHOLDER for NAV STYLE (to be added next) === */
   </style>
 </head>
 <body>
-  <section class="hero">
+
+  <!-- === Fixed Sidebar Navigation === -->
+  <div class="side-nav">
+    <ul>
+      <li><a href="#section1">OUR FIRM</a></li>
+      <li><a href="#section2">OUR APPROACH</a></li>
+      <li><a href="#section3">OUR INSIGHTS</a></li>
+      <li><a href="#section4">OUR IMPACT</a></li>
+      <li><a href="#section5">OUR NEWS</a></li>
+    </ul>
+  </div>
+
+  <!-- === Fixed Mouse Scroll Icon === -->
+  <div class="scroll-indicator">
+    <div class="mouse-icon"></div>
+  </div>
+
+  <!-- === HERO SECTION === -->
+  <section class="hero" id="section1">
     <!-- Background Video -->
     <video class="background-video" autoplay muted loop playsinline>
       <source src="patronomics-bg.mp4" type="video/mp4" />
@@ -91,8 +112,15 @@
     </div>
   </section>
 
-  <section class="about">
+  <!-- === ABOUT SECTION === -->
+  <section class="about" id="section2">
     About Patronomics (next section)
   </section>
+
+  <!-- === Placeholder sections to match nav === -->
+  <section id="section3" class="about">Section 3</section>
+  <section id="section4" class="about">Section 4</section>
+  <section id="section5" class="about">Section 5</section>
+
 </body>
 </html>
