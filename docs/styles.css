@@ -29,6 +29,17 @@ body {
   opacity: 0.3;
 }
 
+/* ========== NEW: BOLD VERTICAL LINE NEXT TO SIDEBAR ========== */
+.side-nav-divider {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 120px; /* Adjust this value based on sidebar width */
+  width: 3px;
+  background-color: white;
+  z-index: 998;
+}
+
 /* ========== STICKY SIDE NAV (HORIZONTAL TEXT, Carlyle-style) ========== */
 .side-nav {
   display: flex;
