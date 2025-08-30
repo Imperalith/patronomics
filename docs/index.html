@@ -1,116 +1,104 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Imperalith Capital</title>
-    <meta name="description" content="Research-driven market frameworks and tools." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="brand">
-        <div class="logo">IC</div>
-        <div class="brand-text">
-          <span class="brand-name">IMPERALITH</span>
-          <span class="brand-sub">CAPITAL MANAGEMENT</span>
-        </div>
-      </div>
-      <nav class="nav">
-        <button class="menu">MENU</button>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Patronomics | Imperalith</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+      height: 100%;
+    }
+    section {
+      scroll-snap-align: start;
+      height: 100vh;
+      width: 100%;
+    }
 
-    <main>
-      <section class="hero" style="position: relative; height: 100vh; overflow: hidden;">
+    /* Section 1 – Hero */
+    .hero {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 8vw;
+      background-color: black;
+      color: white;
+    }
 
-        <!-- Background Video -->
-        <video autoplay muted loop playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; transform: translate(-50%, -50%) scale(0.93); object-fit: cover; z-index: -1;">
-          <source src="patronomics-bg.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      line-height: 1.2;
+    }
 
-        <!-- Content Overlay -->
-        <div class="hero-copy" style="position: relative; z-index: 2; padding-top: 20vh; padding-left: 8vw;">
-          <h1 style="line-height: 1.2; font-family: 'Playfair Display', serif;">
-            We want to invest<br/>
-            <span style="font-family: 'Montserrat', sans-serif; font-size: 6rem; font-weight: 500; display: inline-block;">$10,000</span><br/>
-            in your future
-          </h1>
-          <a class="cta" href="mailto:contact@imperalith.com">Contact us</a>
-        </div>
-      </section>
-    </main>
+    .hero h1 span {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 6rem;
+      font-weight: 500;
+      display: inline-block;
+    }
 
-    <footer class="site-footer">
-      <span>EN</span>
-    </footer>
+    .hero a.cta {
+      margin-top: 1rem;
+      display: inline-block;
+      padding: 10px 24px;
+      background-color: white;
+      color: black;
+      text-decoration: none;
+      font-weight: 500;
+      font-family: 'Inter', sans-serif;
+    }
 
-    <!-- ===== FULLSCREEN OVERLAY MENU ===== -->
-    <div id="megaMenu" class="mega" role="dialog" aria-modal="true" aria-labelledby="megaTitle" hidden>
-      <div class="mega__backdrop" data-close></div>
+    .hero video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%) scale(0.93);
+      object-fit: cover;
+      z-index: -1;
+    }
 
-      <div class="mega__panel">
-        <header class="mega__hdr">
-          <div class="brand">
-            <div class="logo">IC</div>
-            <div class="brand-text">
-              <span class="brand-name">IMPERALITH</span>
-              <span class="brand-sub">CAPITAL MANAGEMENT</span>
-            </div>
-          </div>
-          <button class="mega__close" aria-label="Close menu" data-close>&times;</button>
-        </header>
+    /* Section 2 – About Placeholder */
+    .about {
+      background-color: #f6f6f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
 
-        <h2 id="megaTitle" class="sr-only">Site Navigation</h2>
+  <!-- Section 1: Hero -->
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="patronomics-bg.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <h1>
+      We want to invest<br/>
+      <span>$10,000</span><br/>
+      in your future
+    </h1>
+    <a class="cta" href="mailto:contact@imperalith.com">Contact us</a>
+  </section>
 
-        <div class="mega__grid">
-          <section class="mega__col">
-            <h3 class="mega__title">Strategies</h3>
-            <hr class="mega__rule" />
-            <nav class="mega__nav">
-              <a href="#" class="mega__link">Strategies Overview</a>
-              <a href="#" class="mega__link">Insurance-Linked Securities</a>
-              <a href="#" class="mega__link">Trade Finance</a>
-            </nav>
-          </section>
+  <!-- Section 2: About Patronomics -->
+  <section class="about">
+    About Patronomics Coming Soon
+  </section>
 
-          <section class="mega__col">
-            <h3 class="mega__title">About</h3>
-            <hr class="mega__rule" />
-            <nav class="mega__nav">
-              <a href="about.html" class="mega__link">Company Overview</a>
-              <a href="#" class="mega__link">Our History</a>
-              <a href="#" class="mega__link">People</a>
-              <a href="#" class="mega__link">Contact</a>
-            </nav>
-          </section>
-
-          <section class="mega__col">
-            <h3 class="mega__title">Insights</h3>
-            <hr class="mega__rule" />
-            <nav class="mega__nav mega__nav--cards">
-              <a href="#" class="mega__card"><span class="mega__card-title">Bridging the Disaster Gap</span></a>
-              <a href="#" class="mega__card"><span class="mega__card-title">ILS: Climate & ESG</span></a>
-              <a href="#" class="mega__card"><span class="mega__card-title">Confirmed Trade Receivables</span></a>
-              <a href="#" class="mega__link mega__all">All Insights →</a>
-            </nav>
-          </section>
-        </div>
-
-        <footer class="mega__ftr">
-          <div class="lang">EN</div>
-          <div class="legal">© Imperalith Capital. All rights reserved.</div>
-        </footer>
-      </div>
-    </div>
-
-    <!-- Three.js via CDN -->
-    <script src="https://unpkg.com/three@0.161.0/build/three.min.js"></script>
-    <script src="main.js"></script>
-  </body>
+</body>
 </html>
