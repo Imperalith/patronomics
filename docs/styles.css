@@ -9,37 +9,40 @@ body {
   overflow-x: hidden;
 }
 
-/* ========== STICKY SIDE NAV ========== */
+/* ========== STICKY SIDE NAV (HORIZONTAL TEXT) ========== */
 .side-nav {
   position: fixed;
   top: 50%;
-  left: 24px;
+  left: 40px;
   transform: translateY(-50%);
   z-index: 999;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
 }
+
 .side-nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
-.side-nav ul li {
-  margin: 0;
-}
+
 .side-nav ul li a {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
   text-decoration: none;
   font-size: 10px;
   letter-spacing: 2px;
-  color: #9ca3af;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
   transition: all 0.3s ease;
-  font-family: Inter, system-ui, sans-serif;
 }
+
 .side-nav ul li a:hover {
-  color: white;
+  color: #d1d5db;
 }
 
 /* ========== SCROLL INDICATOR ========== */
