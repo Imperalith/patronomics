@@ -145,7 +145,7 @@ body {
 
 /* ========== NEW: HERO CONTENT SHIFT ========== */
 .hero-content {
-  padding-left: 6vw; /* Adjust this number to move further right */
+  padding-left: 8vw; /* Adjust this number to move further right */
   max-width: 700px;
 }
 
