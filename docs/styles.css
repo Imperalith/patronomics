@@ -9,7 +9,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ========== STICKY SIDE NAV (HORIZONTAL TEXT) ========== */
+/* ========== STICKY SIDE NAV (HORIZONTAL TEXT, Carlyle-style) ========== */
 .side-nav {
   position: fixed;
   top: 50%;
@@ -27,18 +27,21 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  align-items: flex-start; /* Aligns text to the left */
   gap: 24px;
 }
 
 .side-nav ul li a {
   text-decoration: none;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 2px;
   color: #ffffff;
   font-family: 'Inter', sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   transition: all 0.3s ease;
+  writing-mode: horizontal-tb;   /* ✅ Force horizontal text */
+  transform: none;               /* ✅ Remove any rotation */
 }
 
 .side-nav ul li a:hover {
@@ -148,7 +151,7 @@ body {
 
 /* ========== NEW: HERO CONTENT SHIFT ========== */
 .hero-content {
-  padding-left: 8vw; /* Adjust this number to move further right */
+  padding-left: 8vw;
   max-width: 700px;
 }
 
