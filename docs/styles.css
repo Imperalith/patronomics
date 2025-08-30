@@ -75,7 +75,6 @@ body {
 }
 
 /* ========== YOUR EXISTING HEADER, HERO, FOOTER, ETC ========== */
-/* (These are unchanged and kept intact from your original file) */
 .site-header {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -142,6 +141,12 @@ body {
   right: 24px; bottom: 16px;
   font-size: 12px; letter-spacing: 2px;
   color: #9ca3af; z-index: 20;
+}
+
+/* ========== NEW: HERO CONTENT SHIFT ========== */
+.hero-content {
+  padding-left: 6vw; /* Adjust this number to move further right */
+  max-width: 700px;
 }
 
 /* Responsive adjustments */
