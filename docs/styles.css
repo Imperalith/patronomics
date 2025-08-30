@@ -13,28 +13,20 @@ body {
 .side-nav-container {
   position: fixed;
   top: 50%;
-  right: 28px;
+  left: 28px;
   transform: translateY(-50%);
   z-index: 999;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-items: center;
   gap: 16px;
 }
 
-.nav-separator {
-  width: 1px;
-  height: 160px;
-  background-color: white;
-  opacity: 0.3;
-}
-
-/* ========== NEW: BOLD VERTICAL LINE NEXT TO SIDEBAR ========== */
 .side-nav-divider {
   position: fixed;
   top: 0;
   bottom: 0;
-  right: 120px; /* Adjust this value based on sidebar width */
+  left: 120px; /* Adjust this if you want the line closer/farther */
   width: 3px;
   background-color: white;
   z-index: 998;
