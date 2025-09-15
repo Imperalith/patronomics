@@ -212,6 +212,8 @@ body {
 .about-content h2 {
   font-family: "Playfair Display", Georgia, serif;
   font-weight: 400;
-  font-size: 2.4rem;
+  font-size: clamp(28px, 4.2vw, 54px);
+  letter-spacing: 0.2px;
+  color: #d1d5db;
   margin-bottom: 2rem;
 }
