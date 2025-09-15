@@ -209,6 +209,15 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  max-width: 800px;
+  margin-bottom: 1.5rem;
+  color: #d1d5db;
+  font-family: 'Inter', sans-serif;
+}
+
 .about-content h2 {
   font-family: "Playfair Display", Georgia, serif;
   font-weight: 400;
