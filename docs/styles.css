@@ -181,3 +181,30 @@ body {
     padding-top: 96px;
   }
 }
+
+/* ========== NEW: ABOUT SECTION WITH BACKGROUND VIDEO ========== */
+.about {
+  position: relative;
+  color: #ffffff;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.about-background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%) scale(1);
+  object-fit: cover;
+  z-index: -1;
+}
+
+.about-content {
+  position: relative;
+  z-index: 2;
+  font-size: 2rem;
+  padding: 3rem 5vw;
+  font-family: 'Montserrat', sans-serif;
+}
