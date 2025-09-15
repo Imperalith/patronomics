@@ -205,6 +205,6 @@ body {
   position: relative;
   z-index: 2;
   font-size: 2rem;
-  padding: 8rem 5vw 3rem 5vw;
+  padding: 8rem 5vw 3rem 5vw; /* top, right, bottom, left */
   font-family: 'Montserrat', sans-serif;
 }
